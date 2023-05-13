@@ -1,7 +1,6 @@
 package Completed.MiddleOfLinkedList;
 
-//Submission: https://leetcode.com/problems/middle-of-the-linked-list/submissions/949296338/?envType=study-plan&id=level-1
-
+//Submission: https://leetcode.com/problems/middle-of-the-linked-list/submissions/949296338/
 public class MiddleOfLinkedList {
     public ListNode middleNode(ListNode head) {
         ListNode pointer2 = head;
