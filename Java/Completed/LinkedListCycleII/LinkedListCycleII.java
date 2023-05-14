@@ -1,4 +1,4 @@
-package LinkedListCycleII;
+package Completed.LinkedListCycleII;
 
 //Submission: https://leetcode.com/submissions/detail/949364357/
 
