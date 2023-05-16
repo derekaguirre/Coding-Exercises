@@ -1,4 +1,4 @@
-package LinkedListCycleII;
+package Completed.LinkedListCycleII;
 
 class ListNode {
     int val;
