@@ -9,7 +9,7 @@ public class RemoveElement {
         int val = 2;
 
         System.out.println(removeElement(nums, val));
-
+ 
     }
 
     public static int removeElement(int[] nums, int val) {
