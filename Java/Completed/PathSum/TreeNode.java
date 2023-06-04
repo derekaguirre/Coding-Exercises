@@ -1,4 +1,4 @@
-package PathSum;
+package Completed.PathSum;
 
 public class TreeNode {
     int val;
