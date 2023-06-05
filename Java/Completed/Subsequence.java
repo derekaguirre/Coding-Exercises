@@ -1,3 +1,5 @@
+package Completed;
+
 public class Subsequence {
 
     // Submission: https://leetcode.com/problems/is-subsequence/submissions/949287552/?envType=study-plan&id=level-1

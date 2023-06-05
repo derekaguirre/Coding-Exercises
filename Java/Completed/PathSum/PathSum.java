@@ -1,4 +1,4 @@
-package PathSum;
+package Completed.PathSum;
 
 //Submission: https://leetcode.com/problems/path-sum/submissions/958050335/
 

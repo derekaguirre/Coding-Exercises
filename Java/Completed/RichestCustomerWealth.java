@@ -1,4 +1,4 @@
-
+package Completed;
 public class RichestCustomerWealth {
 
     //Submission: https://leetcode.com/problems/richest-customer-wealth/submissions/956121188/
