@@ -1,6 +1,6 @@
 package Completed;
 
-//Submission: https://leetcode.com/problems/check-if-it-is-a-straight-line/submissions/964327716/
+//Submission: https://leetcode.com/problems/check-if-it-is-a-straight-line/submissions/964328340/
 
 public class CheckStraightLine {
 
