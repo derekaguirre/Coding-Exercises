@@ -16,7 +16,7 @@ public class DeleteMiddleOfLinkedList {
             slow = slow.next;
             fast = fast.next.next;
         }
-        //slow is now at the middle of the list
+        //Move slow once more to find the middle of the list and reassign the pointer
         slow.next = slow.next.next;
 
         return head;
