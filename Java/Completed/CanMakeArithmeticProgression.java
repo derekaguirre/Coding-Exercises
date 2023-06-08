@@ -2,6 +2,8 @@ package Completed;
 
 import java.util.Arrays;
 
+//Submission: https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/submissions/965632328/
+
 class CanMakeArithmeticProgression {
     public boolean canMakeArithmeticProgression(int[] arr) {
         Arrays.sort(arr);
