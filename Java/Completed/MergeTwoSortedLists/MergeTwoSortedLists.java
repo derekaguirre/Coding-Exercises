@@ -1,49 +1,42 @@
 package Completed.MergeTwoSortedLists;
 
-//Submission: https://leetcode.com/submissions/detail/924752837/
+//Iterative Submission: https://leetcode.com/problems/merge-two-sorted-lists/submissions/969262424/
+//Recursive Submission: https://leetcode.com/problems/merge-two-sorted-lists/submissions/969268590/
 
 class Solution {
+
+    //Iterative Solution
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode mergedList = new ListNode(0);
         ListNode mergedListPointer = mergedList;
-        if (list1 == null && list2 == null) {
+        //Check if both lists are empty
+        if(list1 == null && list2 == null){
             return list2;
         }
+            
+        while(list1 != null || list2 != null ){    
 
-        while (list1 != null || list2 != null) {
 
-            // List 1 Empty
-            if (list1 != null && list2 == null) {
-                mergedListPointer.next = list1;
-                mergedListPointer = mergedListPointer.next;
-                list1 = list1.next;
-            }
-            // List 2 Empty
-            else if (list2 != null && list1 == null) {
-                mergedListPointer.next = list2;
-                mergedListPointer = mergedListPointer.next;
-                list2 = list2.next;
-            }
-
-            // Both lists not empty
-            else if (list1.val < list2.val) {
+            
+            //If list 1 has a bigger value then add that to the new list first
+            if(list1.val < list2.val){
                 mergedListPointer.next = list1;
                 list1 = list1.next;
                 mergedListPointer = mergedListPointer.next;
+
             }
-            // Current val in list 2 is less than current val of list 1
-            else if (list2.val < list1.val) {
+            //If list 2 has a bigger value then add that to the new list first
+            else if(list2.val < list1.val){
                 mergedListPointer.next = list2;
                 list2 = list2.next;
                 mergedListPointer = mergedListPointer.next;
             }
-
-            // Current vals are equal to each other
-            else if (list1.val == list2.val) {
+            //If both lists have the same value then add both with no respect to the order
+            else if(list1.val == list2.val){                
                 mergedListPointer.next = list1;
                 list1 = list1.next;
                 mergedListPointer = mergedListPointer.next;
-
+                
                 mergedListPointer.next = list2;
                 list2 = list2.next;
                 mergedListPointer = mergedListPointer.next;
@@ -51,5 +44,23 @@ class Solution {
         }
         return mergedList.next;
 
+    }
+
+    //Recursive Solution
+    public ListNode mergeTwoListsRec(ListNode list1, ListNode list2) {
+        //If any of the lists are empty then return the respective empty list
+        if(list1 == null)
+            return list2;
+        if(list2 == null)
+            return list1;
+
+        //If if one list's value is bigger than the other's, then the bigger value's list moves 
+        if(list1.val < list2.val){
+            list1.next = mergeTwoListsRec(list1.next, list2);
+            return list1;
+        } else{
+            list2.next = mergeTwoListsRec(list1, list2.next);
+            return list2;
+        }
     }
 }
