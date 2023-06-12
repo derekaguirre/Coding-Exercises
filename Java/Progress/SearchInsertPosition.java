@@ -1,3 +1,5 @@
+package Progress;
+
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int high = nums.length, low = 0;

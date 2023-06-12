@@ -1,3 +1,5 @@
+package Progress;
+
 class Solution {
     
     //I CAN SOLVE IT WITH SUBSTRINGS AS WELL

@@ -1,3 +1,5 @@
+package Progress;
+
 class MergeSortedArray {
 
     //Submission: https://leetcode.com/submissions/detail/892522990/
