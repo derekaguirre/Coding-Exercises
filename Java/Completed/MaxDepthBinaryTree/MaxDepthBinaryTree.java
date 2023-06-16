@@ -16,22 +16,30 @@ public class MaxDepthBinaryTree {
 
     // Iterative DFS Preorder
     public int maxDepthIter(TreeNode root) {
-        if(root == null)
+        if (root == null)
             return 0;
         Stack<TreeNode> stack = new Stack<>();
-        int depth = 1;
-        stack.push(root);
-        //Rlr
-        while(!stack.isEmpty()){
-            TreeNode node = stack.pop();
+        Stack<Integer> nodeCount = new Stack<>();
+        int depth = 0;
 
-            if(node != null){
-                 node = max(st)
+        stack.push(root);
+        nodeCount.push(1);
+        while (!stack.isEmpty()) {
+            TreeNode currNode = stack.pop();
+            int currCount = nodeCount.pop();
+
+            depth = Math.max(depth, currCount);
+
+            if (currNode.left != null) {
+                stack.push(currNode.left);
+                nodeCount.push(currCount + 1);
+            }
+            if (currNode.right != null) {
+                stack.push(currNode.right);
+                nodeCount.push(currCount + 1);
             }
         }
-
-        
-        return 0;
+        return depth;
     }
 
     // Iterative BFS (Level Order)
