@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+//Recursive DFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/902148345/
+//Iterative DFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/972312128/
+//BFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/972301741/
+
 public class MaxDepthBinaryTree {
 
     // Recursive Depth First Search
