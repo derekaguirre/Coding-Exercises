@@ -1,13 +1,32 @@
 package Completed.MaxDepthBinaryTree;
 
-//Submission: https://leetcode.com/submissions/detail/902148345/
+public class MaxDepthBinaryTree{
 
-class MaxDepthBinaryTree {
+    public static void main(String[] args) {
+    }
+
+
+    //BFS
+    //LevelOrder
+
+    //DFS
+    //Preorder  Rlr
+    //Inorder   lRr
+    //Postorder lrR
+
+    //Recursive Depth First Search
     public int maxDepth(TreeNode root) {
         if(root == null)
             return 0;
-        if(root.left == null && root.right == null)
-            return 1;
-        return Math.max(maxDepth(root.left),maxDepth(root.right)) + 1;
+        
+        return Math.max(maxDepth(root.left) + 1, (maxDepth(root.right) + 1));
     }
+
+    //Iterative DFS
+
+
+
+    //Iterative BFS
+    
+    
 }
