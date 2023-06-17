@@ -28,62 +28,62 @@ public class MaxFruitsHarvestedWithKSteps {
         //Expect: 71
     }
 
-    // This approach will call for the max value of two approaches
-    // Approach 1: Checking if the left OR right is biggest and returning that
-    // Approach 2: Checking for both sides using two pointers to find the biggest
-    // number to return
+    // // This approach will call for the max value of two approaches
+    // // Approach 1: Checking if the left OR right is biggest and returning that
+    // // Approach 2: Checking for both sides using two pointers to find the biggest
+    // // number to return
 
-    // The biggest value of fruits from either approach using Math.max() will be the
-    // final answer.
-    public static int maxTotalFruits(int[][] fruits, int startPos, int totalSteps) {
-        int leftSteps = 0, rightSteps = 0;
-        int leftTotal = 0, rightTotal = 0;
-        int leftFruit = 0, rightFruit = 0;
+    // // The biggest value of fruits from either approach using Math.max() will be the
+    // // final answer.
+    // public static int maxTotalFruits(int[][] fruits, int startPos, int totalSteps) {
+    //     int leftSteps = 0, rightSteps = 0;
+    //     int leftTotal = 0, rightTotal = 0;
+    //     int leftFruit = 0, rightFruit = 0;
 
-        for (int rows = 0; rows < fruits.length; rows++) {
+    //     for (int rows = 0; rows < fruits.length; rows++) {
 
-            // So I wanna see if the position is smaller than the startPos
-            // If so then I check how many possible harvests can be made on the left side
-            if (fruits[rows][0] < startPos) {
-                // System.out.println("Smaller: " + fruits[rows][0]);
-                // Distance between startPos and first left harvest
-                leftSteps = Math.abs(fruits[rows][0] - totalSteps);
+    //         // So I wanna see if the position is smaller than the startPos
+    //         // If so then I check how many possible harvests can be made on the left side
+    //         if (fruits[rows][0] < startPos) {
+    //             // System.out.println("Smaller: " + fruits[rows][0]);
+    //             // Distance between startPos and first left harvest
+    //             leftSteps = Math.abs(fruits[rows][0] - totalSteps);
 
-                // If distance does not go above the totalSteps then it is reachable and
-                // therefore valid
-                if (Math.abs(leftTotal - leftSteps) < totalSteps) {
-                    leftTotal += Math.abs(leftTotal - leftSteps);
-                    // Count fruit
-                    leftFruit += fruits[rows][1];
-                }
+    //             // If distance does not go above the totalSteps then it is reachable and
+    //             // therefore valid
+    //             if (Math.abs(leftTotal - leftSteps) < totalSteps) {
+    //                 leftTotal += Math.abs(leftTotal - leftSteps);
+    //                 // Count fruit
+    //                 leftFruit += fruits[rows][1];
+    //             }
 
-                // System.out.println("Left steps: " + leftSteps + "\nleftTotalSteps: " +
-                // leftTotal + "\nleftFruits: " + leftFruit);
-            } else { // If bigger check how many possible harvests can be made on the right side
-                     // System.out.println("Bigger " + fruits[rows][0]);
-                     // Distance between startPos first right harvest
-                rightSteps = Math.abs(fruits[rows][0] - totalSteps);
+    //             // System.out.println("Left steps: " + leftSteps + "\nleftTotalSteps: " +
+    //             // leftTotal + "\nleftFruits: " + leftFruit);
+    //         } else { // If bigger check how many possible harvests can be made on the right side
+    //                  // System.out.println("Bigger " + fruits[rows][0]);
+    //                  // Distance between startPos first right harvest
+    //             rightSteps = Math.abs(fruits[rows][0] - totalSteps);
 
-                // If distance does not go above the totalSteps then it is reachable and
-                // therefore valid
-                if (Math.abs(rightTotal - rightSteps) < totalSteps) {
-                    rightTotal += Math.abs(rightTotal - rightSteps);
-                    // Count fruit
-                    rightFruit += fruits[rows][1];
-                }
-                // System.out.println("Right steps: " + rightSteps + "\nrightTotalSteps: " +
-                // rightTotal + "\nrightFruits: "+ rightFruit);
+    //             // If distance does not go above the totalSteps then it is reachable and
+    //             // therefore valid
+    //             if (Math.abs(rightTotal - rightSteps) < totalSteps) {
+    //                 rightTotal += Math.abs(rightTotal - rightSteps);
+    //                 // Count fruit
+    //                 rightFruit += fruits[rows][1];
+    //             }
+    //             // System.out.println("Right steps: " + rightSteps + "\nrightTotalSteps: " +
+    //             // rightTotal + "\nrightFruits: "+ rightFruit);
 
-            }
-            System.out.println();
-        }
-        // System.out.println("Final Left Fruit: " + leftFruit + "\nFinal Right Fruit: "
-        // + rightFruit);
-        // System.out.println("Most fruit: " + Math.max(leftFruit, rightFruit));
-        int maxFruit = Math.max(leftFruit, rightFruit);
-        maxFruit = Math.min(maxTotalFruitsCheckBothSides(fruits, startPos, totalSteps), maxFruit);
-        return maxFruit;
-    }
+    //         }
+    //         System.out.println();
+    //     }
+    //     // System.out.println("Final Left Fruit: " + leftFruit + "\nFinal Right Fruit: "
+    //     // + rightFruit);
+    //     // System.out.println("Most fruit: " + Math.max(leftFruit, rightFruit));
+    //     int maxFruit = Math.max(leftFruit, rightFruit);
+    //     maxFruit = Math.min(maxTotalFruitsCheckBothSides(fruits, startPos, totalSteps), maxFruit);
+    //     return maxFruit;
+    // }
 
     // Will check both left and right
     public static int maxTotalFruitsCheckBothSides(int[][] fruits, int startPos, int totalStepsLeft) {
