@@ -1,8 +1,8 @@
-package Progress;
+package Completed;
 
 //Submission: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/976806996/
 
-public class MaxProfit {
+public class BuyAndSellI {
     public static void main(String[] args) {
         // System.out.println("FINAL EVAL: " + maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
         // System.out.println("FINAL EVAL: " + maxProfit(new int[] { 5, 4, 3, 2, 1 }));
