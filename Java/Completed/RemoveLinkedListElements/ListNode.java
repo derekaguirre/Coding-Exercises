@@ -1,4 +1,4 @@
-package Progress.RemoveTargetFromLL;
+package Completed.RemoveLinkedListElements;
 
 public class ListNode {
     int val;
