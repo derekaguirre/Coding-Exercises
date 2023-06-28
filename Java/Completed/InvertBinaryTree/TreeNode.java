@@ -1,4 +1,4 @@
-package Progress.FlattenTree;
+package Completed.InvertBinaryTree;
 
 public class TreeNode {
     int val;

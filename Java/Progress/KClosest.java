@@ -11,7 +11,7 @@ public class KClosest {
         // int[][] points = { { 1, 3 }, { -2, 2 } };
         int[][] points = { { 3, 3 }, { 5, -1 }, { -2, 4 } };
         // int[][] points = { { 0, 1 }, { 1, 0 } };
-        kClosest(points, 2);
+        kClosestMax(points, 2);
 
         
     }
