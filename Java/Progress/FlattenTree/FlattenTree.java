@@ -1,6 +1,6 @@
 package Progress.FlattenTree;
 
-//Problem: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
+//Submission: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/submissions/981220599/
 
 public class FlattenTree {
     public static void main(String[] args) {
@@ -11,17 +11,19 @@ public class FlattenTree {
         TreeNode node2 = new TreeNode(2, node3, node4);
         TreeNode node1 = new TreeNode(1, node2, node5);
 
-        flatten(node1);
+        // flatten(node1);
     }
 
-    TreeNode prev = new TreeNode();
-    public static void flatten(TreeNode root) {
-        if (root == null)
+    private TreeNode newTree = null;
+    public void flatten(TreeNode root) {
+        if(root == null)
             return;
-
+        // Rlr
         flatten(root.right);
         flatten(root.left);
-
+        root.right = newTree;
+        root.left =null;
         
+        newTree = root;
     }
 }
