@@ -40,21 +40,21 @@ public class KClosest {
         return Arrays.copyOfRange(points,0,k);
     }
     
-    public static int[][] kClosestPrioQ(int[][] points, int k){
-        final PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(
-            Comparator.comparing(this::euclideanDistance)
-        );
+//     public static int[][] kClosestPrioQ(int[][] points, int k){
+//         final PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(
+//             Comparator.comparing(this::euclideanDistance)
+//         );
 
-        for(int[] point: points){
-            priorityQueue.offer(point);
-        }
+//         for(int[] point: points){
+//             priorityQueue.offer(point);
+//         }
 
-        final int[][] result = new int[k][2];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = priorityQueue.poll();
-        }
-        return result;
-    }
+//         final int[][] result = new int[k][2];
+//         for (int i = 0; i < result.length; i++) {
+//             result[i] = priorityQueue.poll();
+//         }
+//         return result;
+//     }
     private static int euclideanDistance(int[] point){
         return point[0] * point[0] + point[1] + point[1];
     }
