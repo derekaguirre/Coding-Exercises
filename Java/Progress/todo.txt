@@ -1,0 +1,9 @@
+DONE Two Sum https://leetcode.com/problems/two-sum/solutions/3619262/3-method-s-c-java-python-beginner-friendly/
+Roman to Integer https://leetcode.com/problems/roman-to-integer/description/
+Palindrome Number https://leetcode.com/problems/palindrome-number/description/
+Maximum Subarray https://leetcode.com/problems/maximum-subarray/description/
+Remove Element https://leetcode.com/problems/remove-element/description/
+Contains Duplicate https://leetcode.com/problems/contains-duplicate/description/
+Add Two Numbers https://leetcode.com/problems/add-two-numbers/description/
+Majority Element https://leetcode.com/problems/majority-element/description/
+Remove Duplicates from Sorted Array https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
