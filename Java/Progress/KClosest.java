@@ -1,7 +1,6 @@
 package Progress;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 //Problem: https://leetcode.com/problems/k-closest-points-to-origin/description/

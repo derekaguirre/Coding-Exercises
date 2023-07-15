@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,11 +14,10 @@ public class TopKFrequentElements {
 
         topKFrequent(nums, k);
     }
-
     public static int[] topKFrequent(int[] nums, int k) {
         List<Integer>[] frequency = new List[nums.length + 1];
         Map<Integer, Integer> map = new HashMap<>();
-        List<Integer> result = new ArrayList();
+        List<Integer> result = new ArrayList<Integer>();
 
         // Store occurrences in the hash map O(n)
         for (int i = 0; i < nums.length; i++) {

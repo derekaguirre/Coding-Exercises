@@ -1,10 +1,11 @@
 package Progress;
 
 //Problem: https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/description/
+
 public class MaxFruitsHarvestedWithKSteps {
     public static void main(String[] args) {
-        int startPos = 5;
-        int steps = 4;
+        // int startPos = 5;
+        // int steps = 4;
         // int[][] fruits = { { 2, 8 },
         // { 6, 3 },
         // { 8, 6 } };

@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 //Submission: https://leetcode.com/problems/find-the-highest-altitude/submissions/974490118/
 

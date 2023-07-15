@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 import java.util.Arrays;
 

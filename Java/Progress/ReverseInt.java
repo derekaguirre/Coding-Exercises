@@ -33,7 +33,7 @@ public class ReverseInt {
         }
 
         // Iterate through and push to a stack
-        Stack<Character> stack = new Stack();
+        Stack<Character> stack = new Stack<Character>();
         while (iter < intStr.length()) {
             stack.push(intStr.charAt(iter));
             iter++;

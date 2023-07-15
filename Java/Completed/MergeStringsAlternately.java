@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 //Submission: https://leetcode.com/problems/merge-strings-alternately/submissions/969891141/
 

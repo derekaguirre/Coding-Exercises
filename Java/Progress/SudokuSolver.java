@@ -1,7 +1,4 @@
 package Progress;
-
-import java.util.*;
-
 //Problem: https://leetcode.com/problems/sudoku-solver/
 
 public class SudokuSolver {
@@ -32,9 +29,9 @@ public class SudokuSolver {
     }
 
     public static void solveSudoku(char[][] board) {
-        Set<Character> knownRow = new HashSet<Character>();
-        Set<Character> knownCol = new HashSet<Character>();
-        Set<Character> knownBox = new HashSet<Character>();
+        // Set<Character> knownRow = new HashSet<Character>();
+        // Set<Character> knownCol = new HashSet<Character>();
+        // Set<Character> knownBox = new HashSet<Character>();
 
         for (int i = 0; i < board.length; i++) {
             // set.add(board[i]);

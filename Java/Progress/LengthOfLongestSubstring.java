@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+//Problem: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
 public class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>(); 
