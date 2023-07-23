@@ -1,4 +1,6 @@
-package Progress;
+package Completed;
+
+//Submission: https://leetcode.com/problems/buddy-strings/submissions/984922060/
 
 public class BuddyStrings {
     public boolean buddyStrings(String s, String goal) {
