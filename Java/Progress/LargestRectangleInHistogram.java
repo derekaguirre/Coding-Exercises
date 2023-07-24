@@ -1,6 +1,8 @@
 package Progress;
 
-//Problem: https://leetcode.com/problems/largest-rectangle-in-histogram/
+import java.util.Stack;
+
+//Submission: https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1003073341/
 
 public class LargestRectangleInHistogram {
     public static void main(String[] args) {
@@ -64,8 +66,25 @@ public class LargestRectangleInHistogram {
         return max;
     }
 
-
-    public static int largestRectangleArea2(int[] heights) {
-        return 0;
+    public int largestRectangleArea2(int[] h) {
+        int n = h.length, i = 0, max = 0;
+        Stack<Integer> s = new Stack<>();
+        while (i < n) {
+            // as long as the current bar is shorter than the last one in the stack
+            // (monotonic increasing order)
+            // we keep popping out the stack and calculate the area based on the popped bar
+            // while its not empty and the current box is smaller than the box in the stack
+            while (!s.isEmpty() && h[i] < h[s.peek()]) {
+                // handle the index of the left bound
+                max = Math.max(max, h[s.pop()] * (i - (s.isEmpty() ? 0 : s.peek() + 1)));
+            }
+            // put current box's index to the stack
+            s.push(i++);
+        }
+        // finally pop out any bar left in the stack and calculate the area based on it
+        while (!s.isEmpty()) {
+            max = Math.max(max, h[s.pop()] * (n - (s.isEmpty() ? 0 : s.peek() + 1)));
+        }
+        return max;
     }
 }
