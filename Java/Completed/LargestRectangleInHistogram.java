@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 import java.util.Stack;
 
@@ -12,7 +12,7 @@ public class LargestRectangleInHistogram {
         // int[] heights4 = { 1, 2, 3, 4, 5 };
         int[] heights5 = { 5, 4, 3, 2, 1 };
 
-        System.out.println(largestRectangleArea(heights5));
+        System.out.println(largestRectangleArea2(heights5));
     }
 
     // For every pair get the absolute difference
@@ -66,7 +66,7 @@ public class LargestRectangleInHistogram {
         return max;
     }
 
-    public int largestRectangleArea2(int[] h) {
+    public static int largestRectangleArea2(int[] h) {
         int n = h.length, i = 0, max = 0;
         Stack<Integer> s = new Stack<>();
         while (i < n) {
