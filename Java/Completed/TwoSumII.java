@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 //Submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/1003085813/
 
