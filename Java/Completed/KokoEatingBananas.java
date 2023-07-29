@@ -1,4 +1,4 @@
-package Progress;
+package Completed;
 
 //Submission: https://leetcode.com/problems/koko-eating-bananas/submissions/1006554406/
 
