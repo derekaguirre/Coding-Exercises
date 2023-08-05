@@ -46,4 +46,18 @@ public class ReverseLinkedList {
         }
         return prev;
     }
+
+     //Recursive O(n) time, O(n) space
+    public ListNode reverseListRecursive(ListNode head) {
+        if(head == null)
+            return null;
+
+        ListNode newHead = head;
+        if (head.next != null){
+            newHead = reverseListRecursive(head.next);
+            head.next.next = head;
+        }
+        head.next = null;
+        return newHead;
+    }
 }
