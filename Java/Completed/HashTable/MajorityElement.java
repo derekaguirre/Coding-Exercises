@@ -6,6 +6,9 @@ import java.util.HashMap;
 //Submission: https://leetcode.com/problems/majority-element/submissions/972359584/
 
 public class MajorityElement {
+    public static void main(String[] args) {
+        System.out.println(majorityElement2(new int[] { 2, 2, 3, 1, 1, 1, 2, 2 }));
+    }
 
     public static int majorityElement(int[] nums) {
         if (nums.length == 1)
@@ -30,5 +33,25 @@ public class MajorityElement {
             }
         }
         return element;
+    }
+
+    public static int majorityElement2(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (!map.containsKey(nums[i]))
+                map.put(nums[i], 1);
+            else
+                map.put(nums[i], map.get(nums[i]) + 1);
+        }
+        int majorityKey = 0;
+        int majorityVal = 0;
+        for (int key : map.keySet()) {
+            if (map.get(key) > majorityVal){
+                majorityKey = key;
+                majorityVal = map.get(key);
+            }
+        }
+        return majorityKey;
     }
 }
