@@ -1,4 +1,4 @@
-package Tested;
+package Completed.BinarySearch;
 
 import static org.junit.Assert.assertArrayEquals;
 
