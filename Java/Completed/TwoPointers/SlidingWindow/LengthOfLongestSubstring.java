@@ -1,4 +1,4 @@
-package Progress;
+package Completed.TwoPointers.SlidingWindow;
 
 import java.util.HashSet;
 import java.util.Set;
