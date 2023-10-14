@@ -1,6 +1,7 @@
 package Completed.Tree.InvertBinaryTree;
 
 //Submission: https://leetcode.com/problems/invert-binary-tree/submissions/981549244/
+//Submission 2: https://leetcode.com/problems/invert-binary-tree/submissions/1074653517
 
 public class InvertBinaryTree {
     public static void main(String[] args) {
@@ -28,6 +29,18 @@ public class InvertBinaryTree {
         invertTree(root.left);
         invertTree(root.right);
 
+        return root;
+    }
+
+    public static TreeNode invertTree2(TreeNode root) {
+        if(root == null){
+            return root;
+        }
+        TreeNode tmp = root.left;
+        root.left = root.right;
+        root.right = tmp;
+        invertTree(root.left);
+        invertTree(root.right);
         return root;
     }
 }
