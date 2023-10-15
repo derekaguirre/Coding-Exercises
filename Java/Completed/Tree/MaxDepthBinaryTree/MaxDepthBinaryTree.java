@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 //Recursive DFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/902148345/
+//Recursive DFS2: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/1074656508/
 //Iterative DFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/972312128/
 //BFS: https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/972301741/
 
@@ -69,4 +70,12 @@ public class MaxDepthBinaryTree {
         return level;
     }
 
+
+    //Recursive 2 DFS
+    public int maxDepth2(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        return Math.max(maxDepth2(root.left) + 1, maxDepth2(root.right) + 1);
+    }
 }
