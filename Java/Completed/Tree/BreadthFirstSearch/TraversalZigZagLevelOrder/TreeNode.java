@@ -1,4 +1,4 @@
-package Completed.Tree.BreadthFirstSearch;
+package Completed.Tree.BreadthFirstSearch.TraversalZigZagLevelOrder;
 
 public class TreeNode {
     int val;

@@ -1,4 +1,4 @@
-package Completed.Tree.BreadthFirstSearch;
+package Completed.Tree.BreadthFirstSearch.TraversalLevelOrder;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
