@@ -1,4 +1,4 @@
-package Completed.Tree.TraversalPreOrder;
+package Completed.Tree.DepthFirstSearch.TraversalPostOrder;
 
 public class TreeNode {
     int val;

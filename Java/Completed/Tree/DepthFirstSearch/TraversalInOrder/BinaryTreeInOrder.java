@@ -1,4 +1,4 @@
-package Completed.Tree.TraversalInOrder;
+package Completed.Tree.DepthFirstSearch.TraversalInOrder;
 
 import java.util.ArrayList;
 import java.util.List;
