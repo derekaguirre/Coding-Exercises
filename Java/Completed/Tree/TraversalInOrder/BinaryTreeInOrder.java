@@ -1,4 +1,4 @@
-package Completed.Tree.BinaryTreeInOrderTraversal;
+package Completed.Tree.TraversalInOrder;
 
 import java.util.ArrayList;
 import java.util.List;

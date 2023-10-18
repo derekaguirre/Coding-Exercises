@@ -1,4 +1,4 @@
-package Completed.Tree.BinaryTreeInOrderTraversal;
+package Completed.Tree.TraversalInOrder;
 
 public class TreeNode {
     int val;
