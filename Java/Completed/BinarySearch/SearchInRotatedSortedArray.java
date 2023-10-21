@@ -1,4 +1,4 @@
-package Progress;
+package Completed.BinarySearch;
 
 //Submissions: https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/1008122399/
 
