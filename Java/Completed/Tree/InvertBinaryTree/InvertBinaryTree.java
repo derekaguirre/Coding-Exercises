@@ -22,10 +22,11 @@ public class InvertBinaryTree {
     public static TreeNode invertTree(TreeNode root) {
         if (root == null)
             return root;
-        TreeNode tmpTree = root.left;
+        //Swap children of the root
+        TreeNode tmp = root.left;
         root.left = root.right;
-        root.right = tmpTree;
-        // Once done at the root level, move to the child nodes
+        root.right = tmp;
+        //Invert left tree, then the right
         invertTree(root.left);
         invertTree(root.right);
 

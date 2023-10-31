@@ -2,8 +2,10 @@ package Completed.Tree.DepthFirstSearch.TraversalInOrder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 //Submission: https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/980374214/
+//Submission2: https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/1088140759/
 
 public class BinaryTreeInOrder {
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class BinaryTreeInOrder {
         TreeNode node2 = new TreeNode(2, node3, null);
         TreeNode root = new TreeNode(1, null, node2);
 
-        inorderTraversal(root);
+        inOrderIter(root);
     }
 
     public static List<Integer> inorderTraversal(TreeNode root) {
@@ -31,5 +33,21 @@ public class BinaryTreeInOrder {
         helper(root.right, res);
 
         return res;
+    }
+
+    public static List<Integer> inOrderIter(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> result = new ArrayList<Integer>();
+        TreeNode current = root;
+        while (current != null || stack.size() > 0) {
+            while(current!= null){
+                stack.add(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            result.add(current.val);
+            current = current.right;
+        }
+        return result;
     }
 }
