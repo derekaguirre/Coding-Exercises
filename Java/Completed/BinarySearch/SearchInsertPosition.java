@@ -4,7 +4,7 @@ package Completed.BinarySearch;
 
 public class SearchInsertPosition {
     // given a sorted array of distinct ints, and a target
-    // return the index if the target is found. if not return the index xwhere it
+    // return the index if the target is found. if not return the index where it
     // would be if it were inserted in order
     public static int searchInsert(int[] nums, int target) {
         int low = 0, high = nums.length - 1;
