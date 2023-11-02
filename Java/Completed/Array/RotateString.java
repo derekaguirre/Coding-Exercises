@@ -3,7 +3,10 @@ package Completed.Array;
 //Submission: https://leetcode.com/problems/rotate-string/submissions/955486324/
 
 public class RotateString {
-    public boolean rotateString(String s, String goal) {
+    public static void main(String[] args) {
+        rotateString("abcde", "cdeab");
+    }
+    public static boolean rotateString(String s, String goal) {
         if (s.equals(goal))
             return true;
         else if (s.length() == goal.length()) {
