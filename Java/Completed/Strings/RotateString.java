@@ -1,4 +1,4 @@
-package Completed.Array;
+package Completed.Strings;
 
 //Submission: https://leetcode.com/problems/rotate-string/submissions/955486324/
 
