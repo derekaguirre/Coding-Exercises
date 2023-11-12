@@ -1,4 +1,4 @@
-package Progress;
+package Completed.Strings;
 
 //Submission: https://leetcode.com/problems/reverse-words-in-a-string-iii/submissions/1089407639/
 
