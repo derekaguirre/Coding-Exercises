@@ -1,4 +1,4 @@
-package Progress;
+package Completed.Array;
 
 //Submission: https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/1091486338/
 
