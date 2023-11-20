@@ -1,12 +1,16 @@
 package Completed.Tree.IsSubTree;
 
-//Submission: https://leetcode.com/problems/subtree-of-another-tree/submissions/1107121066/
+//Submission: https://leetcode.com/problems/subtree-of-another-tree/submissions/1111007471/
 
 public class IsSubTree {
     public boolean isSubtree(TreeNode s, TreeNode t) { // takes O(m x n)
-        if (s == null) {
-            return t == null;
-        }
+        // if (s == null)
+        //     return t == null;
+        if(t == null)
+            return true;
+        if(s == null)
+            return false;
+
         return isSame(s, t) || isSubtree(s.left, t) || isSubtree(s.right, t);
     }
 
