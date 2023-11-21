@@ -1,4 +1,5 @@
 package Completed.Stack;
+
 import java.util.Stack;
 
 //Submission: https://leetcode.com/problems/valid-parentheses/submissions/951959449/
@@ -6,8 +7,8 @@ import java.util.Stack;
 
 public class ValidParenthesis {
     public static void main(String[] args) {
-        String input = "asda()afgasd";
-        System.out.println(isValid(input));
+        String input = "()";
+        System.out.println(isValid3(input));
     }
 
     public static boolean isValid(String s) {
@@ -27,7 +28,7 @@ public class ValidParenthesis {
         return stack.empty();
     }
 
-    //Attempt 2
+    // Attempt 2
     public static boolean isValid2(String s) {
         Stack<Character> stack = new Stack<Character>();
         char[] charArr = s.toCharArray();
@@ -40,6 +41,23 @@ public class ValidParenthesis {
             else if (charArr[i] == ')' && !stack.empty() && stack.peek() == '(')
                 stack.pop();
             else if (charArr[i] == ']' && !stack.empty() && stack.peek() == '[')
+                stack.pop();
+            else
+                return false;
+        }
+        return stack.empty();
+    }
+
+    // Attempt 3
+    public static boolean isValid3(String s) {
+        Stack<Character> stack = new Stack<Character>();
+        char[] charArr = s.toCharArray();
+        for (int i = 0; i < charArr.length; i++) {
+            if (charArr[i] == '(' || charArr[i] == '{' || charArr[i] == '[')
+                stack.push(charArr[i]);
+            else if (!stack.isEmpty() && stack.peek() == '(' && charArr[i] == ')' ||
+                !stack.isEmpty() && stack.peek() == '{' && charArr[i] == '}' ||
+                !stack.isEmpty() && stack.peek() == '[' && charArr[i] == ']')
                 stack.pop();
             else
                 return false;
