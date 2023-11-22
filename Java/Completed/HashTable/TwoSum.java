@@ -18,30 +18,43 @@ public class TwoSum {
         }
     }
 
-    //O(n)
+    // O(n)
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-            //return location of the current val and its complement
+            // return location of the current val and its complement
             if (map.containsKey(complement)) {
-                return new int[] { i, map.get(complement) }; 
+                return new int[] { i, map.get(complement) };
             }
-            //otherwise populate the map
+            // otherwise populate the map
             map.put(nums[i], i);
         }
-        //not found
+        // not found
         return new int[] { -1, -1 };
     }
 
-    //O(n^2)
+    // O(n^2)
     public static int[] twoSum2(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; j++) {
-                //ensure that the same number isn't getting added up
+                // ensure that the same number isn't getting added up
                 if (j != i && nums[i] + nums[j] == target)
                     return new int[] { j, i };
             }
+        }
+        return new int[] { -1, -1 };
+    }
+
+    // O(n)
+    public static int[] twoSum3(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int complement = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (map.containsKey(complement)) {
+                return new int[] { i, map.get(complement) };
+            }
+            map.put(nums[i], i);
         }
         return new int[] { -1, -1 };
     }
