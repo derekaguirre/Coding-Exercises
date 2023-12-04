@@ -1,6 +1,7 @@
 package Completed.TwoPointers;
 
 //Submission:  https://leetcode.com/problems/valid-palindrome/submissions/1003076543/
+//Submission 3: https://leetcode.com/problems/valid-palindrome/submissions/1175908667
 
 public class ValidPalindrome {
     public static void main(String[] args) {
@@ -31,6 +32,19 @@ public class ValidPalindrome {
                 return false;
             front++;
             back--;
+        }
+        return true;
+    }
+
+    //3rd Implementation
+    public static boolean isPalindrome3(String s) {
+        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        int front = 0;
+        int back = s.length() - 1;
+        while (front <= back) {
+            // If they're not equal then its not a palindrome
+            if (s.charAt(front++) != s.charAt(back--))
+                return false;
         }
         return true;
     }
