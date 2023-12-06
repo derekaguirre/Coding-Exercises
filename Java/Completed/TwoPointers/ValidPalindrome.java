@@ -38,12 +38,12 @@ public class ValidPalindrome {
 
     //3rd Implementation
     public static boolean isPalindrome3(String s) {
-        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        s = s.toLowerCase().replaceAll("[^A-Za-z0-9]", "");
         int front = 0;
         int back = s.length() - 1;
         while (front <= back) {
             // If they're not equal then its not a palindrome
-            if (s.charAt(front++) != s.charAt(back--))
+            if (s.charAt(front++) != s.charAt(back--)){}
                 return false;
         }
         return true;
