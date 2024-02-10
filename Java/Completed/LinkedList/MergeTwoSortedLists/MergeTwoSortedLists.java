@@ -29,7 +29,6 @@ class Solution {
         }
 
         while (list1 != null || list2 != null) {
-
             // If one list is empty
             if (list1 != null && list2 == null) {
                 curr.next = list1;
