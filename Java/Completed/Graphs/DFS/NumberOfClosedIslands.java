@@ -1,4 +1,4 @@
-package Completed.Graphs;
+package Completed.Graphs.DFS;
 
 //Submission: https://leetcode.com/problems/number-of-closed-islands/submissions/1090316343/
 
