@@ -1,4 +1,4 @@
-package Completed.Strings;
+package Progress;
 
 //Problem: https://leetcode.com/problems/longest-palindromic-substring/description/
 
