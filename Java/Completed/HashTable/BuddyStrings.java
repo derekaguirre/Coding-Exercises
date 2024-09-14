@@ -1,8 +1,17 @@
 package Completed.HashTable;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 //Submission: https://leetcode.com/problems/buddy-strings/submissions/984922060/
 
 public class BuddyStrings {
+    public static void main(String[] args) {
+        System.out.println(buddyStringsTwo("abcd", "cbad"));
+    }
+
     public boolean buddyStrings(String s, String goal) {
         int m = s.length(), n = goal.length();
         if (m != n) {
@@ -29,5 +38,28 @@ public class BuddyStrings {
             }
         }
         return diff == 2 || (diff == 0 && f);
+    }
+
+    public static boolean buddyStringsTwo(String s, String goal) {
+        //False if the strings are not equal in length
+        if (s.length() != goal.length())
+            return false;
+
+        //If both strings are equal and do not need swaps
+        if (s.equals(goal)) {
+            Set<Character> sSet = new HashSet<Character>();
+            for (char c : s.toCharArray())
+                sSet.add(c);
+            return sSet.size() < s.length();
+        }
+        //If there are differences add the positions to a list
+        List<Integer> dif = new ArrayList<>();
+        for (int i = 0; i < s.length(); ++i)
+            if (s.charAt(i) != goal.charAt(i))
+                dif.add(i);
+        //If there are more than 2 differences its false
+        //If the first difference is not the same as the goal at the second difference its false
+        return dif.size() == 2 && s.charAt(dif.get(0)) == goal.charAt(dif.get(1))
+                && s.charAt(dif.get(1)) == goal.charAt(dif.get(0));
     }
 }
