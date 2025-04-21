@@ -1,12 +1,12 @@
 package Completed.Math;
 
-//Submission: https://leetcode.com/problems/add-digits/submissions/1612160089
-
+//Submission 1: https://leetcode.com/problems/add-digits/submissions/1612160089
+//Submission 2: https://leetcode.com/problems/add-digits/submissions/1613253731
 public class AddDigits {
     public static void main(String[] args) {
-        System.out.println(addDigits(38));
+        System.out.println(addDigitsNaive(38));
     }
-    public static int addDigits(int num) {
+    public static int addDigitsNaive(int num) {
         //start the program from the number that was provided to us
         int result = num;
         //keep evaluating until the result is a single digit
@@ -23,5 +23,15 @@ public class AddDigits {
             tmp = 0;
         }
         return result;
+    }
+    
+    // Optimal solution using digital root concept
+    public static int addDigits(int num) {
+        if(num == 0)
+            return 0;
+        else if(num % 9 == 0)
+            return 9;
+        else
+            return num % 9;
     }
 }
